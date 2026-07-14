@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Home from './components/Home';
 import PlayerUI from './components/PlayerUI';
 import YouTubeEngine from './components/YouTubeEngine';
+import SilentAudio from './components/SilentAudio';
 
 function App() {
   const [originalPlaylist, setOriginalPlaylist] = useState([]);
@@ -176,6 +177,8 @@ function App() {
           onDuration={setDuration}
         />
       )}
+      
+      <SilentAudio isPlaying={isPlaying} />
     </div>
   );
 }
